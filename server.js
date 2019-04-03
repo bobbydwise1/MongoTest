@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 
-app.use(bodyParser.unlencoded({extended: true})
+app.use(bodyParser.urlencoded({extended: true}))
 
 // all your CRUD handlers here
 
@@ -15,5 +15,5 @@ app.get('/', (req, res) => {
 })
 
 app.post('/quotes', (req, res) => {
-  console.log('Hello!!!')
+  console.log(req.body)
 })
