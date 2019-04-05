@@ -2,7 +2,10 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 const MongoClient = require('mongodb').MongoClient
-const uri = 'mongodb+srv://MyMongoDBUser:qwerty123456@cluster0-a32tn.mongodb.net/test?retryWrites=true';
+require('./models/User');
+
+
+
 var db
 
 MongoClient.connect(uri, (err, client) => {
